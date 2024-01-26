@@ -3,12 +3,113 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/back"
     tools:context=".NewBookFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/view_title"
+                android:hint="Название книги"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textSize="32sp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="4sp"
+                android:textColor="@color/dark"/>
+
+            <ImageView
+                android:id="@+id/view_cover"
+                android:layout_width="250sp"
+                android:background="@drawable/default_book"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_height="400sp"
+                app:layout_constraintTop_toBottomOf="@+id/view_title"
+                android:layout_marginTop="12sp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/view_author"
+                android:hint="Автор книги"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="8sp"
+                android:textSize="24sp"
+                app:layout_constraintTop_toBottomOf="@+id/view_cover"
+                android:layout_marginTop="8sp"
+                android:textColor="@color/dark"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/view_date"
+                android:text="01.01.1977"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="8sp"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/view_author"
+                android:layout_marginTop="8sp"
+                android:textColor="@color/blue"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/view_pages"
+                android:hint="Кол-во"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="8sp"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/view_date"
+                android:layout_marginTop="8sp"
+                android:textColor="@color/dark"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Страниц"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="8sp"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/view_date"
+                app:layout_constraintStart_toEndOf="@id/view_pages"
+                android:layout_marginTop="14sp"
+                android:textColor="@color/dark"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Напишите своё впечатление о книге..."
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="8sp"
+                android:textSize="24sp"
+                app:layout_constraintTop_toBottomOf="@+id/view_pages"
+                android:layout_marginTop="8sp"
+                android:textColor="@color/dark"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/save_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="12dp"
+                android:src="@drawable/save"
+                style="@style/Theme.App.FloatActionButton" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </FrameLayout>

@@ -3,12 +3,138 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/back"
     tools:context=".StatisticsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/info_title"
+                android:text="Статистика"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textSize="32sp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="4sp"
+                android:layout_marginLeft="8sp"
+                android:textColor="@color/dark"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv1"
+                android:text="Прочитано:"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textSize="24sp"
+                app:layout_constraintTop_toBottomOf="@id/info_title"
+                android:layout_marginTop="4sp"
+                android:layout_marginLeft="8sp"
+                android:textColor="@color/dark"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cnt_already"
+                android:text="X"
+                app:layout_constraintLeft_toRightOf="@id/tv1"
+                android:textSize="24sp"
+                android:layout_marginLeft="6sp"
+                app:layout_constraintTop_toBottomOf="@id/info_title"
+                android:layout_marginTop="4sp"
+                android:textColor="@color/blue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="книг"
+                app:layout_constraintLeft_toRightOf="@id/cnt_already"
+                android:textSize="24sp"
+                android:layout_marginLeft="6sp"
+                app:layout_constraintTop_toBottomOf="@id/info_title"
+                android:layout_marginTop="4sp"
+                android:textColor="@color/dark"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv2"
+                android:text="В планах:"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textSize="24sp"
+                app:layout_constraintTop_toBottomOf="@id/tv1"
+                android:layout_marginTop="4sp"
+                android:layout_marginLeft="8sp"
+                android:textColor="@color/dark"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cnt_plans"
+                android:text="X"
+                app:layout_constraintLeft_toRightOf="@id/tv2"
+                android:textSize="24sp"
+                android:layout_marginLeft="6sp"
+                app:layout_constraintTop_toBottomOf="@id/tv1"
+                android:layout_marginTop="4sp"
+                android:textColor="@color/blue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="книг"
+                app:layout_constraintLeft_toRightOf="@id/cnt_plans"
+                android:textSize="24sp"
+                android:layout_marginLeft="6sp"
+                app:layout_constraintTop_toBottomOf="@id/tv1"
+                android:layout_marginTop="4sp"
+                android:textColor="@color/dark"/>
+
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Любимый жанр:"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textSize="24sp"
+                android:layout_marginLeft="6sp"
+                app:layout_constraintTop_toBottomOf="@id/tv2"
+                android:layout_marginTop="4sp"
+                android:textColor="@color/dark"/>
+
+            <TextView
+                android:id="@+id/genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Жанр"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textSize="24sp"
+                android:layout_marginLeft="6sp"
+                app:layout_constraintTop_toBottomOf="@id/tv3"
+                android:layout_marginTop="4sp"
+                android:textColor="@color/blue"/>
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:layout_width="200sp"
+                android:layout_height="200sp"
+                app:layout_constraintTop_toBottomOf="@id/genre"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="6sp"
+                android:layout_marginTop="8sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </FrameLayout>

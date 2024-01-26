@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recycler_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp"
+    android:background="@android:color/transparent"
+    android:paddingVertical="12dp">
+
+    <TextView
+        android:id="@+id/book_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="4sp"
+        android:layout_marginTop="4sp"
+        android:text="Название"
+        android:textSize="32sp"/>
+
+    <TextView
+        android:id="@+id/book_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4sp"
+        app:layout_constraintTop_toBottomOf="@id/book_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Автор"
+        android:layout_marginTop="4sp"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/book_genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4sp"
+        app:layout_constraintTop_toBottomOf="@id/book_author"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Жанр"
+        android:layout_marginTop="4sp"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/book_cover"
+        android:layout_width="100sp"
+        android:layout_height="160sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/book_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/book_title"
+        android:layout_marginRight="4sp"
+        android:layout_marginTop="4sp"
+        android:layout_marginLeft="4sp"
+        android:background="@drawable/default_book"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

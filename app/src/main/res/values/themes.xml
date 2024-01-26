@@ -8,7 +8,11 @@
     <style name="Theme.MyLib" parent="Base.Theme.MyLib" />
 
     <style name="Theme.App.FloatActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
-        <item name="android:backgroundTint">#3F51B5</item>
-        <item name="android:tint">#3F51B5</item>
+        <item name="android:backgroundTint">@color/dark</item>
+        <item name="android:tint">@color/dark</item>
+    </style>
+
+    <style name="AppSearchView" parent="Widget.AppCompat.SearchView" >
+        <item name="android:textSize">15sp</item>
     </style>
 </resources>
